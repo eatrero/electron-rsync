@@ -2,12 +2,39 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <title>Rsync!</title>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    We are using node <script>document.write(process.versions.node)</script>,
-    Chrome <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
+
+    <div class="window" id="photon-window">
+
+      <header class="toolbar toolbar-header">
+
+        <div class="toolbar-actions">
+          <div class="btn-group">
+
+            <button class="btn btn-default btn-large" onclick="openSrcFolder()">
+              <span class="icon icon-folder icon-text"></span>
+              Open Src
+            </button>
+
+            <button class="btn btn-default btn-large" onclick="openDestFolder()">
+              <span class="icon icon-folder icon-text"></span>
+              Open Dest
+            </button>
+
+            <button class="btn btn-default btn-large" onclick="startSync()">
+              <span class="icon icon-folder icon-text"></span>
+              Start Sync
+            </button>
+
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <script src="js/menu.js"></script>
+
   </body>
 </html>
+

@@ -3,6 +3,7 @@
 const electron = require('electron');
 // Module to control application life.
 const app = electron.app;
+app.commandLine.appendSwitch('js-flags', '--expose_gc');
 // Module to create native browser window.
 const BrowserWindow = electron.BrowserWindow;
 
@@ -12,7 +13,7 @@ let mainWindow;
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 800, height: 600});
+  mainWindow = new BrowserWindow({width: 1200, height: 400, 'accept-first-mouse': true,'title-bar-style': 'hidden'});
 
   // and load the index.html of the app.
   mainWindow.loadURL('file://' + __dirname + '/index.html');
